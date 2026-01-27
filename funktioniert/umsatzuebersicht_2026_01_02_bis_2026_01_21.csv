@@ -1,0 +1,308 @@
+﻿"Alle Zahlungsarten"
+
+"Anzahl der Belege/Rechnungen"
+Typ;Anzahl
+Rechnungen/Belege;106
+Stornierungen;2
+Gesamt;108
+
+"Umsätze nach Umsatzsteuer-Sätzen"
+USt;"Netto €";"Steuer €";"Brutto €"
+19 %;628,97;119,68;748,65
+7 %;412,53;28,92;441,45
+0 %;1,10;0,00;1,10
+Gesamt;1042,60;148,60;1191,20
+
+"Umsätze nach Zahlungsart"
+Zahlungsart;"Brutto €"
+EC-Karte;319,70
+Bar;844,00
+Kreditkarte;27,50
+Gesamt;1191,20
+
+
+"Alle Zahlungsarten exkl. Rechnung (unbar)"
+
+"Anzahl der Belege/Rechnungen"
+Typ;Anzahl
+Rechnungen/Belege;106
+Stornierungen;2
+Gesamt;108
+
+"Umsätze nach Umsatzsteuer-Sätzen"
+USt;"Netto €";"Steuer €";"Brutto €"
+19 %;628,97;119,68;748,65
+7 %;412,53;28,92;441,45
+0 %;1,10;0,00;1,10
+Gesamt;1042,60;148,60;1191,20
+
+"Umsätze nach Zahlungsart"
+Zahlungsart;"Brutto €"
+EC-Karte;319,70
+Bar;844,00
+Kreditkarte;27,50
+Gesamt;1191,20
+
+
+"Zahlungsart Rechnung (unbar)"
+
+"Anzahl der Belege/Rechnungen"
+Typ;Anzahl
+Rechnungen/Belege;0
+Stornierungen;0
+Gesamt;0
+
+"Umsätze nach Umsatzsteuer-Sätzen"
+USt;"Netto €";"Steuer €";"Brutto €"
+Gesamt;0,00;0,00;0,00
+
+"Umsätze nach Zahlungsart"
+Zahlungsart;"Brutto €"
+Gesamt;0,00
+
+
+
+Artikel/Dienstleistungs-Auswertung
+"Alle Zahlungsarten"
+
+Artikel/DL;"USt %";Bezeichnung;Menge;"Brutto €"
+Artikel;19 %;"7-Zwerge Kinder Saft 0,2Ltr, Voelkel Regional / Demeter";6,000;9,60
+Artikel;19 %;Americano;8,000;20,00
+Artikel;19 %;"Amitaba, medium taiwanese gold 7010";1,000;42,00
+Artikel;19 %;"Ananas Kokos Cocktail 0,7l";1,000;3,95
+Artikel;19 %;"Apfel Aprikosen Pfirsich Saft 0,7Ltr, Voelkel";4,000;16,00
+Artikel;19 %;"Apfel Mango Saft 0,2l";2,000;3,00
+Artikel;19 %;"Belugalinse Balsamico Aufstrich 135g, Nabio Deutschland";1,000;2,70
+Artikel;19 %;"BioZisch Himbeer Cassis 0,33l";1,000;1,40
+Artikel;19 %;"BioZisch Zitrone 0,7l";1,000;2,50
+Artikel;19 %;"Café Crema";2,000;5,00
+Artikel;19 %;Cappuccino;7,000;21,00
+Artikel;19 %;"Edelsteinbaum 78382 -+ 8cm";2,000;12,00
+Artikel;19 %;"Edelsteinbaum Rosenquarz";1,000;9,00
+Artikel;19 %;"Espresso Doppio";1,000;3,00
+Artikel;19 %;"Espresso Macchiatto";1,000;2,50
+Artikel;19 %;"Extra Shot";2,000;2,00
+Artikel;19 %;"Falten Einkaufstashe 7625";1,000;4,00
+Artikel;19 %;"Feine Bitter 71% Cacao 80g, Vivani Deutschland / 100% Bio nach EU/VO";2,000;6,00
+Artikel;19 %;"FFP2 Maske";3,000;9,00
+Artikel;19 %;"Filterkaffee  Tasse";18,000;45,00
+Artikel;19 %;"Fingerpuppe aus Filz Biene Finger Püppchen";1,000;3,50
+Artikel;19 %;"Fingerpuppe aus Filz Hund Dalmatiner Finger Püppchen";1,000;3,50
+Artikel;19 %;"Franzbrötchen, vegan";7,000;14,00
+Artikel;19 %;"gemstone Mala knotted 7229";1,000;55,00
+Artikel;19 %;"gemstone Mala/knotted  - 7225";1,000;37,00
+Artikel;19 %;"Geschenktüte 9147";2,000;6,00
+Artikel;19 %;"Geschirrtuch [Halbleinen] Hähnry | Hahn | Küchentücher";1,000;15,95
+Artikel;19 %;Hafermilch;8,000;0,00
+Artikel;19 %;"Khatag 1987";1,000;3,00
+Artikel;19 %;"knotted mala jade/ stone 9017";1,000;28,00
+Artikel;19 %;Koffeinfrei;1,000;0,00
+Artikel;19 %;"Kunst: Avalokiteshvara (1000-armig) 1 - Minikarte";2,000;3,00
+Artikel;19 %;"Kunst: Avalokiteshvara (4-armig) 2 - Minikarte";1,000;1,50
+Artikel;19 %;"Kunst: Dorje Shugden - Minikarte";1,000;1,50
+Artikel;19 %;"Kunst: Green Tara 3 - Minikarte";2,000;3,00
+Artikel;19 %;"Kunst: Manjushri 2 - Minikarte";3,000;4,50
+Artikel;19 %;"Latte Macchiato";4,000;14,00
+Artikel;19 %;"Laugenbrezel mit Butter";3,000;6,60
+Artikel;19 %;"Lotus Teelichalter Capiz all colours 9101";2,000;20,00
+Artikel;19 %;"Mala Brokat Beutel ALL M 9001";1,000;4,00
+Artikel;19 %;"Mala Brokat Beutel dunkelblau mit rote Futter S 9007";1,000;3,00
+Artikel;19 %;"Mandelkekse Schoko, glutenfrei 110g, Werz Deutschland";2,000;9,00
+Artikel;19 %;Milchkaffee;3,000;10,50
+Artikel;19 %;"MorningStar Incense 9201";1,000;5,00
+Artikel;19 %;"Notebook  A5, various  9406";1,000;9,50
+Artikel;19 %;"Notebook various 9425";1,000;5,00
+Artikel;19 %;"Notebook with Japanese closure - Blue Blossom";2,000;25,90
+Artikel;19 %;"Notizbuch veer&moon 9407";1,000;12,00
+Artikel;19 %;"Picasso-Jaspis-Armband 8mm";1,000;4,95
+Artikel;19 %;"Plastikbuchhülle - 210";2,000;2,00
+Artikel;19 %;"Red brocade Book Bag 9446";1,000;12,00
+Artikel;19 %;"Regenbogen-Kristalle Kreis, Tropfen, Zapfen 9716";2,000;8,00
+Artikel;19 %;"Samenbomben - 1er";2,000;5,00
+Artikel;19 %;"Samenkarte Veer &Moon 9604";2,000;9,00
+Artikel;19 %;Samtbeutel;6,000;84,00
+Artikel;19 %;"Sonnenfänger mit Lebensbaum und Rosenquarz - 30cm";1,000;22,00
+Artikel;19 %;"Taschen aus Sari S";3,000;9,00
+Artikel;19 %;"Taschentücher 9803";9,000;2,70
+Artikel;19 %;"Tasse Herz, Lotus, Auge, Regenbogen 11644";1,000;8,00
+Artikel;19 %;Tee;6,000;15,00
+Artikel;19 %;"Temple Stationary: Grußkarte - Shakyamuni - berührt die Erde";2,000;6,00
+Artikel;19 %;"Tzampas Golden Milk 40g";7,000;15,40
+Artikel;19 %;"Vata Tuberose Jasmin Potpouuri Duftbeutel um Hängen 20g - 64609";1,000;3,00
+Artikel;19 %;"Weißer Salbei Smudge mit Zimt S 2er-set";1,000;4,00
+Artikel;19 %;"Wrist Mala Steine/various  7206";1,000;10,00
+Artikel;19 %;"Zimtsterne 140g, Rosengarten Deutschland / 99% aus kBA";1,000;5,00
+Dienstleistung;19 %;Americano;0,000;0,00
+Dienstleistung;19 %;Hafermilch;1,000;0,00
+Dienstleistung;19 %;"ohne Sahne";0,000;0,00
+Dienstleistung;19 %;"warme Milch";0,000;0,00
+Artikel;7 %;"Ariona Fruchtriegel";1,000;1,60
+Artikel;7 %;"Buch Der Neue Führer ins Dakiniland";7,000;209,65
+Artikel;7 %;"Buch: Die mündlichen Anleitungen des Mahamudra";1,000;12,95
+Artikel;7 %;"Buch: Freudvoller Weg";1,000;24,95
+Artikel;7 %;"Dinkel Knusperbrezeln mit Sesam 125g";2,000;4,00
+Artikel;7 %;"Duetto Kakao, mit Amaranth 330g";1,000;4,00
+Artikel;7 %;"Espresso Biscotti Schokoriegel 40g, Vivani Deutschland";3,000;4,50
+Artikel;7 %;"Fenchel/Thymian Honigsirup";1,000;6,50
+Artikel;7 %;"Haferlinge, knuspriges Hafergebäck 125g, Bohlsener Mühle";1,000;2,50
+Artikel;7 %;"Halva 75g";1,000;3,00
+Artikel;7 %;"Handcooked Chips Salt & Vinegar 125g, Trafo Niederland";2,000;5,00
+Artikel;7 %;"Karte: Die Praxis der täglichen Wasserdarbringungen";1,000;2,50
+Artikel;7 %;"Kartoffelchips Paprika 125g, Trafo";3,000;6,30
+Artikel;7 %;"Keksfreunde Zitrone 125g, Bohlsener Mühle";4,000;9,20
+Artikel;7 %;"Lesezeichen rot";1,000;1,00
+Artikel;7 %;"Mandeln Würzig 50g";1,000;2,50
+Artikel;7 %;"Pane Picco Asia 150g";2,000;5,00
+Artikel;7 %;"Pane Picco mit Mohn 150g";1,000;2,50
+Artikel;7 %;"Pistacchio 'Dubai Style' Schokoriegel 40g, Vivani";6,000;10,80
+Artikel;7 %;"Sadhana: Avalokiteshvara";1,000;7,00
+Artikel;7 %;"Sadhana: Der glückselige Pfad";1,000;7,00
+Artikel;7 %;"Sadhana: Der Schnelle Pfad zur Grossen Glückseligkeit 2202";2,000;24,00
+Artikel;7 %;"Sadhana: Hunderte von Gottheiten des Freudvollen Landes";2,000;16,00
+Artikel;7 %;"Sadhana: Powa Zeremonie";2,000;12,00
+Artikel;7 %;"Sadhana: Schatzkammer der Weisheit";4,000;28,00
+Artikel;7 %;"Salbei Lutschpastillen";2,000;6,60
+Artikel;7 %;"Salbei Lutschpastillen 30g";3,000;9,90
+Artikel;7 %;"schoko Reiswaffeln";1,000;2,00
+Artikel;7 %;"Tortilla chiups Org";1,000;2,10
+Artikel;7 %;"Yogi Glücks Tee";1,000;3,40
+Artikel;7 %;"Zimtsterne 140g, Rosengarten Deutschland / 99% aus kBA";1,000;5,00
+Dienstleistung;7 %;Donauwelle;0,000;0,00
+Dienstleistung;7 %;"Mango Creme Fraiche";0,000;0,00
+Artikel;0 %;Spende;2,000;1,10
+Gesamtrabatt;;;;-0,00
+Gesamt;;;234,000;1191,20
+
+"* Durchlaufender Posten"
+
+
+
+Kategorie-Auswertung
+"Alle Zahlungsarten"
+
+Artikel
+Kategorie;"USt %";Bezeichnung;Menge;"Brutto €"
+Café;19 %;Americano;8,000;20,00
+Café;19 %;"Café Crema";2,000;5,00
+Café;19 %;Cappuccino;7,000;21,00
+Café;19 %;"Espresso Doppio";1,000;3,00
+Café;19 %;"Espresso Macchiatto";1,000;2,50
+Café;19 %;"Extra Shot";2,000;2,00
+Café;19 %;"Filterkaffee  Tasse";18,000;45,00
+Café;19 %;"Franzbrötchen, vegan";7,000;14,00
+Café;19 %;Hafermilch;8,000;0,00
+Café;19 %;Koffeinfrei;1,000;0,00
+Café;19 %;"Latte Macchiato";4,000;14,00
+Café;19 %;"Laugenbrezel mit Butter";3,000;6,60
+Café;19 %;Milchkaffee;3,000;10,50
+Café;19 %;Tee;6,000;15,00
+"Gesamt Café";;;71,000;158,60
+Shop;7 %;"Ariona Fruchtriegel";1,000;1,60
+Shop;7 %;"Dinkel Knusperbrezeln mit Sesam 125g";2,000;4,00
+Shop;7 %;"Duetto Kakao, mit Amaranth 330g";1,000;4,00
+Shop;7 %;"Espresso Biscotti Schokoriegel 40g, Vivani Deutschland";3,000;4,50
+Shop;7 %;"Fenchel/Thymian Honigsirup";1,000;6,50
+Shop;7 %;"Haferlinge, knuspriges Hafergebäck 125g, Bohlsener Mühle";1,000;2,50
+Shop;7 %;"Halva 75g";1,000;3,00
+Shop;7 %;"Handcooked Chips Salt & Vinegar 125g, Trafo Niederland";2,000;5,00
+Shop;7 %;"Kartoffelchips Paprika 125g, Trafo";3,000;6,30
+Shop;7 %;"Keksfreunde Zitrone 125g, Bohlsener Mühle";4,000;9,20
+Shop;7 %;"Mandeln Würzig 50g";1,000;2,50
+Shop;7 %;"Pane Picco Asia 150g";2,000;5,00
+Shop;7 %;"Pane Picco mit Mohn 150g";1,000;2,50
+Shop;7 %;"Pistacchio 'Dubai Style' Schokoriegel 40g, Vivani";6,000;10,80
+Shop;7 %;"Salbei Lutschpastillen";2,000;6,60
+Shop;7 %;"Salbei Lutschpastillen 30g";3,000;9,90
+Shop;7 %;"schoko Reiswaffeln";1,000;2,00
+Shop;7 %;"Tortilla chiups Org";1,000;2,10
+Shop;7 %;"Yogi Glücks Tee";1,000;3,40
+Shop;7 %;"Zimtsterne 140g, Rosengarten Deutschland / 99% aus kBA";1,000;5,00
+Shop;19 %;"7-Zwerge Kinder Saft 0,2Ltr, Voelkel Regional / Demeter";6,000;9,60
+Shop;19 %;"Amitaba, medium taiwanese gold 7010";1,000;42,00
+Shop;19 %;"Ananas Kokos Cocktail 0,7l";1,000;3,95
+Shop;19 %;"Apfel Aprikosen Pfirsich Saft 0,7Ltr, Voelkel";4,000;16,00
+Shop;19 %;"Apfel Mango Saft 0,2l";2,000;3,00
+Shop;19 %;"Belugalinse Balsamico Aufstrich 135g, Nabio Deutschland";1,000;2,70
+Shop;19 %;"BioZisch Himbeer Cassis 0,33l";1,000;1,40
+Shop;19 %;"BioZisch Zitrone 0,7l";1,000;2,50
+Shop;19 %;"Edelsteinbaum 78382 -+ 8cm";2,000;12,00
+Shop;19 %;"Edelsteinbaum Rosenquarz";1,000;9,00
+Shop;19 %;"Falten Einkaufstashe 7625";1,000;4,00
+Shop;19 %;"Feine Bitter 71% Cacao 80g, Vivani Deutschland / 100% Bio nach EU/VO";2,000;6,00
+Shop;19 %;"FFP2 Maske";3,000;9,00
+Shop;19 %;"Fingerpuppe aus Filz Biene Finger Püppchen";1,000;3,50
+Shop;19 %;"Fingerpuppe aus Filz Hund Dalmatiner Finger Püppchen";1,000;3,50
+Shop;19 %;"gemstone Mala knotted 7229";1,000;55,00
+Shop;19 %;"gemstone Mala/knotted  - 7225";1,000;37,00
+Shop;19 %;"Geschenktüte 9147";2,000;6,00
+Shop;19 %;"Geschirrtuch [Halbleinen] Hähnry | Hahn | Küchentücher";1,000;15,95
+Shop;19 %;"Khatag 1987";1,000;3,00
+Shop;19 %;"knotted mala jade/ stone 9017";1,000;28,00
+Shop;19 %;"Lotus Teelichalter Capiz all colours 9101";2,000;20,00
+Shop;19 %;"Mala Brokat Beutel ALL M 9001";1,000;4,00
+Shop;19 %;"Mala Brokat Beutel dunkelblau mit rote Futter S 9007";1,000;3,00
+Shop;19 %;"Mandelkekse Schoko, glutenfrei 110g, Werz Deutschland";2,000;9,00
+Shop;19 %;"MorningStar Incense 9201";1,000;5,00
+Shop;19 %;"Notebook  A5, various  9406";1,000;9,50
+Shop;19 %;"Notebook various 9425";1,000;5,00
+Shop;19 %;"Notebook with Japanese closure - Blue Blossom";2,000;25,90
+Shop;19 %;"Notizbuch veer&moon 9407";1,000;12,00
+Shop;19 %;"Picasso-Jaspis-Armband 8mm";1,000;4,95
+Shop;19 %;"Red brocade Book Bag 9446";1,000;12,00
+Shop;19 %;"Regenbogen-Kristalle Kreis, Tropfen, Zapfen 9716";2,000;8,00
+Shop;19 %;"Samenbomben - 1er";2,000;5,00
+Shop;19 %;"Samenkarte Veer &Moon 9604";2,000;9,00
+Shop;19 %;Samtbeutel;6,000;84,00
+Shop;19 %;"Sonnenfänger mit Lebensbaum und Rosenquarz - 30cm";1,000;22,00
+Shop;19 %;"Taschen aus Sari S";3,000;9,00
+Shop;19 %;"Taschentücher 9803";9,000;2,70
+Shop;19 %;"Tasse Herz, Lotus, Auge, Regenbogen 11644";1,000;8,00
+Shop;19 %;"Tzampas Golden Milk 40g";7,000;15,40
+Shop;19 %;"Vata Tuberose Jasmin Potpouuri Duftbeutel um Hängen 20g - 64609";1,000;3,00
+Shop;19 %;"Weißer Salbei Smudge mit Zimt S 2er-set";1,000;4,00
+Shop;19 %;"Wrist Mala Steine/various  7206";1,000;10,00
+Shop;19 %;"Zimtsterne 140g, Rosengarten Deutschland / 99% aus kBA";1,000;5,00
+"Gesamt Shop";;;124,000;664,95
+Spenden;0 %;Spende;2,000;1,10
+"Gesamt Spenden";;;2,000;1,10
+Tharpa;7 %;"Buch Der Neue Führer ins Dakiniland";7,000;209,65
+Tharpa;7 %;"Buch: Die mündlichen Anleitungen des Mahamudra";1,000;12,95
+Tharpa;7 %;"Buch: Freudvoller Weg";1,000;24,95
+Tharpa;7 %;"Karte: Die Praxis der täglichen Wasserdarbringungen";1,000;2,50
+Tharpa;7 %;"Lesezeichen rot";1,000;1,00
+Tharpa;7 %;"Sadhana: Avalokiteshvara";1,000;7,00
+Tharpa;7 %;"Sadhana: Der glückselige Pfad";1,000;7,00
+Tharpa;7 %;"Sadhana: Der Schnelle Pfad zur Grossen Glückseligkeit 2202";2,000;24,00
+Tharpa;7 %;"Sadhana: Hunderte von Gottheiten des Freudvollen Landes";2,000;16,00
+Tharpa;7 %;"Sadhana: Powa Zeremonie";2,000;12,00
+Tharpa;7 %;"Sadhana: Schatzkammer der Weisheit";4,000;28,00
+Tharpa;19 %;"Kunst: Avalokiteshvara (1000-armig) 1 - Minikarte";2,000;3,00
+Tharpa;19 %;"Kunst: Avalokiteshvara (4-armig) 2 - Minikarte";1,000;1,50
+Tharpa;19 %;"Kunst: Dorje Shugden - Minikarte";1,000;1,50
+Tharpa;19 %;"Kunst: Green Tara 3 - Minikarte";2,000;3,00
+Tharpa;19 %;"Kunst: Manjushri 2 - Minikarte";3,000;4,50
+Tharpa;19 %;"Plastikbuchhülle - 210";2,000;2,00
+Tharpa;19 %;"Temple Stationary: Grußkarte - Shakyamuni - berührt die Erde";2,000;6,00
+"Gesamt Tharpa";;;36,000;366,55
+"Gesamt Artikel";;;233,000;1191,20
+
+Dienstleistung
+Kategorie;"USt %";Bezeichnung;Menge;"Brutto €"
+;19 %;Hafermilch;1,000;0,00
+"Gesamt ";;;1,000;0,00
+Café;7 %;Donauwelle;0,000;0,00
+Café;7 %;"Mango Creme Fraiche";0,000;0,00
+Café;19 %;Americano;0,000;0,00
+Café;19 %;"ohne Sahne";0,000;0,00
+Café;19 %;"warme Milch";0,000;0,00
+"Gesamt Café";;;0,000;0,00
+"Gesamt Dienstleistung";;;1,000;0,00
+
+Zusammenfassung
+Typ;;;Menge;"Brutto €"
+Artikel;;;233,000;1191,20
+Dienstleistung;;;1,000;0,00
+Gesamtrabatt;;;;-0,00
+Gesamt;;;234,000;1191,20
+
+"* Durchlaufender Posten"
