@@ -1,4 +1,5 @@
 import argparse
+import csv
 import os
 import re
 import subprocess
@@ -32,13 +33,84 @@ def parse_decimal(value):
 def safe_decimal(value, default="0.00"):
     if value is None:
         return Decimal(default)
-    text = str(value).strip()
+    text = str(value).replace("\xa0", " ").strip()
     if text == "" or text.lower() == "none":
         return Decimal(default)
     try:
-        return Decimal(text.replace(",", "."))
+        return Decimal(text.replace(" ", "").replace(",", "."))
     except (InvalidOperation, ValueError):
         return Decimal(default)
+
+
+def parse_umsatzuebersicht(path):
+    totals = {}
+    stornos_count = None
+    section = None
+    in_tax_section = False
+    header_seen = False
+
+    def clean_cell(cell):
+        return str(cell).replace("\ufeff", "").replace("\xa0", " ").strip().strip('"')
+
+    with open(path, newline="", encoding="utf-8") as file:
+        reader = csv.reader(file, delimiter=";")
+        for row in reader:
+            if not row or all(not c.strip() for c in row):
+                continue
+            cell = clean_cell(row[0])
+            if cell == "Anzahl der Belege/Rechnungen":
+                section = "count"
+                continue
+            if section == "count" and cell == "Typ":
+                continue
+            if section == "count" and cell == "Stornierungen" and len(row) > 1:
+                if stornos_count is None:
+                    stornos_count = safe_int(clean_cell(row[1]), default=0)
+                continue
+            if cell == "Umsätze nach Umsatzsteuer-Sätzen":
+                in_tax_section = True
+                header_seen = False
+                continue
+            if in_tax_section and not header_seen:
+                header_seen = True
+                continue
+            if in_tax_section:
+                ust_label = clean_cell(row[0])
+                if not ust_label:
+                    in_tax_section = False
+                    continue
+                if ust_label.lower().startswith("gesamt"):
+                    if len(row) < 4:
+                        continue
+                    parsed = {
+                        "netto": safe_decimal(row[1]),
+                        "steuer": safe_decimal(row[2]),
+                        "brutto": safe_decimal(row[3]),
+                    }
+                    if "gesamt" not in totals or (
+                        totals["gesamt"]["brutto"] == Decimal("0.00")
+                        and parsed["brutto"] != Decimal("0.00")
+                    ):
+                        totals["gesamt"] = parsed
+                    in_tax_section = False
+                    continue
+                ust_digits = "".join(c for c in ust_label if c.isdigit())
+                if not ust_digits:
+                    continue
+                if len(row) < 4:
+                    continue
+                parsed = {
+                    "netto": safe_decimal(row[1]),
+                    "steuer": safe_decimal(row[2]),
+                    "brutto": safe_decimal(row[3]),
+                }
+                if ust_digits not in totals or (
+                    totals[ust_digits]["brutto"] == Decimal("0.00")
+                    and parsed["brutto"] != Decimal("0.00")
+                ):
+                    totals[ust_digits] = parsed
+
+    return totals, stornos_count
 
 
 def extract_positions_sequential(text, artikel_namen):
@@ -65,6 +137,7 @@ def extract_positions_sequential(text, artikel_namen):
 
 def strip_quantities(text):
     return re.sub(r"\s*\(\d+x\)", "", text)
+
 
 def safe_int(value, default=1):
     try:
@@ -447,6 +520,7 @@ def main():
     parser = argparse.ArgumentParser(description="Rechnungen sortieren und auswerten.")
     parser.add_argument("--rechnungen", help="Pfad zur Rechnungs-CSV")
     parser.add_argument("--artikel", help="Pfad zur Artikelliste-CSV")
+    parser.add_argument("--umsatzuebersicht", help="Pfad zur Umsatzübersicht-CSV")
     parser.add_argument(
         "--sammelrechnung",
         help="Pfad zur Sammelrechnung-PDF (optional, für exakte Summen)",
@@ -464,12 +538,14 @@ def main():
 
     rechnung_path = args.rechnungen
     artikel_path = args.artikel
+    umsatz_path = args.umsatzuebersicht
     sammelrechnung_path = args.sammelrechnung
 
-    if not rechnung_path or not artikel_path or not sammelrechnung_path:
+    if not rechnung_path or not artikel_path or not umsatz_path or not sammelrechnung_path:
         if args.no_gui:
             raise SystemExit(
-                "Bitte --rechnungen, --artikel und --sammelrechnung angeben (oder GUI nutzen)."
+                "Bitte --rechnungen, --artikel, --umsatzuebersicht und --sammelrechnung "
+                "angeben (oder GUI nutzen)."
             )
         import tkinter as tk
         from tkinter import filedialog, messagebox
@@ -491,6 +567,13 @@ def main():
         if not artikel_path:
             return
 
+        umsatz_path = filedialog.askopenfilename(
+            title="Bitte Umsatzübersicht auswählen",
+            filetypes=[("CSV Dateien", "*.csv")],
+        )
+        if not umsatz_path:
+            return
+
         sammelrechnung_path = filedialog.askopenfilename(
             title="Bitte Sammelrechnung (PDF) auswählen",
             filetypes=[("PDF Dateien", "*.pdf")],
@@ -501,6 +584,7 @@ def main():
     try:
         rechnung_df = pd.read_csv(rechnung_path, sep=";", dtype=str)
         artikel_df = pd.read_csv(artikel_path, sep=";", dtype=str)
+        umsatz_totals, umsatz_stornos = parse_umsatzuebersicht(umsatz_path)
         pdf_totals = parse_pdf_totals(sammelrechnung_path)
 
         artikel_df["Name_norm"] = artikel_df["Name*"].apply(normalize)
@@ -517,8 +601,22 @@ def main():
         }
 
         neue_zeilen = []
+        missing_items = []
+        mismatch_rows = []
+        stornierte_count = 0
+
+        def is_storno(row_data):
+            if str(row_data.get("Storniert", "")).strip().lower() == "ja":
+                return True
+            storno_nr = row_data.get("Storno Nr.")
+            if storno_nr is None:
+                return False
+            return str(storno_nr).strip() not in ("", "nan", "None")
 
         for _, row in rechnung_df.iterrows():
+            if is_storno(row):
+                stornierte_count += 1
+                continue
             ust_werte = {
                 u.strip()
                 for u in str(row["Position(en) USt %"]).split(",")
@@ -529,20 +627,26 @@ def main():
                 neue_zeilen.append((row, None))
                 continue
 
-            artikel_seq, _ = extract_positions_sequential(
+            artikel_seq, rest_text = extract_positions_sequential(
                 row["Position(en)"],
                 artikel_namen
             )
 
-            mengen = [int(x.strip()) for x in row["Position(en) Anzahl"].split("|")]
+            mengen = [
+                safe_int(x.strip())
+                for x in str(row["Position(en) Anzahl"]).split("|")
+                if str(x).strip()
+            ]
 
             artikel_7 = []
             artikel_19 = []
             artikel_0 = []
+            artikel_unknown = []
 
             mengen_7 = []
             mengen_19 = []
             mengen_0 = []
+            mengen_unknown = []
 
             netto_7 = Decimal("0.00")
             steuer_7_sum = Decimal("0.00")
@@ -552,10 +656,27 @@ def main():
             brutto_19_sum = Decimal("0.00")
             brutto_0_sum = Decimal("0.00")
             has_spende = False
+            unknown_brutto_sum = Decimal("0.00")
+
+            if not artikel_seq or rest_text:
+                missing_items.append({
+                    "Nr.": row.get("Nr."),
+                    "Position(en)": row.get("Position(en)"),
+                    "Rest": rest_text,
+                })
+                if rest_text:
+                    artikel_unknown.append(f"Unbekannt: {rest_text}")
+                if len(mengen) > len(artikel_seq):
+                    for menge in mengen[len(artikel_seq):]:
+                        mengen_unknown.append(str(menge))
+                    if not artikel_unknown:
+                        artikel_unknown.append("Unbekannt: fehlende Position(en)")
 
             for artikel_norm, menge in zip(artikel_seq, mengen):
                 daten = artikel_map.get(artikel_norm)
                 if daten is None:
+                    artikel_unknown.append(f"Unbekannt: {artikel_norm}")
+                    mengen_unknown.append(str(menge))
                     continue
 
                 ust_num = "".join(c for c in str(daten["USt.*"]) if c.isdigit())
@@ -591,9 +712,17 @@ def main():
                     steuer_19_sum += steuer
                     brutto_19_sum += brutto
 
+            original_netto = parse_decimal(row["Netto €"])
+            original_steuer = parse_decimal(row["Steuer €"])
             original_brutto = parse_decimal(row["Brutto €"])
             trinkgeld = safe_decimal(row.get("Trinkgeld €", "0,00"))
             trinkgeld_remaining = trinkgeld
+
+            if not (artikel_7 or artikel_19 or artikel_0 or artikel_unknown):
+                artikel_unknown = ["Unbekannt: keine Positionen erkannt"]
+                unknown_brutto_sum = original_brutto
+                unknown_netto_sum = original_netto
+                unknown_steuer_sum = original_steuer
 
             if pdf_totals.get(row["Nr."]):
                 target = pdf_totals[row["Nr."]]
@@ -611,8 +740,19 @@ def main():
                     original_brutto - brutto_7_sum - brutto_19_sum
                 )
 
+            if artikel_unknown:
+                unknown_brutto_sum = quantize_money(
+                    original_brutto - brutto_7_sum - brutto_19_sum - brutto_0_sum
+                )
+                unknown_netto_sum = quantize_money(
+                    original_netto - netto_7 - netto_19 - brutto_0_sum
+                )
+                unknown_steuer_sum = quantize_money(
+                    original_steuer - steuer_7_sum - steuer_19_sum
+                )
+
             berechnetes_brutto = quantize_money(
-                brutto_7_sum + brutto_19_sum + brutto_0_sum + trinkgeld
+                brutto_7_sum + brutto_19_sum + brutto_0_sum + unknown_brutto_sum + trinkgeld
             )
 
             original_brutto_gesamt = quantize_money(original_brutto + trinkgeld)
@@ -671,6 +811,23 @@ def main():
                     trinkgeld_remaining = Decimal("0.00")
                 neue_zeilen.append((neu, status))
 
+            if artikel_unknown:
+                neu = row.copy()
+                neu["Position(en)"] = ", ".join(artikel_unknown)
+                neu["Position(en) Anzahl"] = "| ".join(mengen_unknown) if mengen_unknown else ""
+                neu["Position(en) USt %"] = "?"
+                neu["Netto €"] = f"{unknown_netto_sum:.2f}".replace(".", ",")
+                neu["Steuer €"] = f"{unknown_steuer_sum:.2f}".replace(".", ",")
+                neu["Brutto €"] = f"{unknown_brutto_sum:.2f}".replace(".", ",")
+                if "Trinkgeld €" in neu:
+                    neu["Trinkgeld €"] = (
+                        f"{trinkgeld_remaining:.2f}".replace(".", ",")
+                        if trinkgeld_remaining != Decimal("0.00")
+                        else "0,00"
+                    )
+                    trinkgeld_remaining = Decimal("0.00")
+                neue_zeilen.append((neu, "unbekannt"))
+
             if not sammelrechnung_path and abs(spendenbetrag) > TOLERANZ:
                 neu = row.copy()
                 neu["Position(en)"] = "Spende"
@@ -711,12 +868,51 @@ def main():
         output_path = args.output or (os.path.splitext(rechnung_path)[0] + "_sortiert.xlsx")
         output_df.to_excel(output_path, index=False)
 
+        output_sums = {}
+        for _, out_row in output_df.iterrows():
+            nr = str(out_row.get("Nr."))
+            output_sums.setdefault(nr, {
+                "netto": Decimal("0.00"),
+                "steuer": Decimal("0.00"),
+                "brutto": Decimal("0.00"),
+            })
+            output_sums[nr]["netto"] += safe_decimal(out_row.get("Netto €"))
+            output_sums[nr]["steuer"] += safe_decimal(out_row.get("Steuer €"))
+            output_sums[nr]["brutto"] += safe_decimal(out_row.get("Brutto €"))
+
+        for _, src_row in rechnung_df.iterrows():
+            if is_storno(src_row):
+                continue
+            nr = str(src_row.get("Nr."))
+            csv_netto = safe_decimal(src_row.get("Netto €"))
+            csv_steuer = safe_decimal(src_row.get("Steuer €"))
+            csv_brutto = safe_decimal(src_row.get("Brutto €"))
+            sums = output_sums.get(nr)
+            if sums is None:
+                mismatch_rows.append({
+                    "Nr.": nr,
+                    "CSV": (csv_netto, csv_steuer, csv_brutto),
+                    "Excel": (Decimal("0.00"), Decimal("0.00"), Decimal("0.00")),
+                })
+                continue
+            if (csv_netto, csv_steuer, csv_brutto) != (
+                sums["netto"],
+                sums["steuer"],
+                sums["brutto"],
+            ):
+                mismatch_rows.append({
+                    "Nr.": nr,
+                    "CSV": (csv_netto, csv_steuer, csv_brutto),
+                    "Excel": (sums["netto"], sums["steuer"], sums["brutto"]),
+                })
+
         wb = load_workbook(output_path)
         ws = wb.active
 
         gruen = PatternFill("solid", start_color="C6EFCE")
         orange = PatternFill("solid", start_color="FFEB9C")
         blau = PatternFill("solid", start_color="DDEBF7")
+        rot = PatternFill("solid", start_color="FFC7CE")
 
         for i, (_, status) in enumerate(neue_zeilen, start=2):
             if status == "geteilt_ok":
@@ -728,6 +924,9 @@ def main():
             elif status == "spende":
                 for c in ws[i]:
                     c.fill = blau
+            elif status == "unbekannt":
+                for c in ws[i]:
+                    c.fill = rot
 
         wb.save(output_path)
         
@@ -771,9 +970,6 @@ def main():
             zahlung = get(row, "Zahlungsart")
             ust_zeile = str(get(row, "Position(en) USt %")).strip()
 
-            if ust_zeile == "?":
-                continue
-
             pos_text = normalize(strip_quantities(get(row, "Position(en)")))
             mengen_text = get(row, "Position(en) Anzahl")
             mengen = [
@@ -782,14 +978,8 @@ def main():
                 if str(x).strip()
             ]
 
-            # Artikel positionsgleich zerlegen
+            # Artikel positionsgleich zerlegen (kein Komma-Fallback)
             artikel_seq, _ = extract_positions_sequential(pos_text, artikel_namen_phase2)
-            if len(artikel_seq) < len(mengen):
-                fallback_parts = [
-                    normalize(strip_quantities(part))
-                    for part in str(get(row, "Position(en)")).split(",")
-                ]
-                artikel_seq = [part for part in fallback_parts if part]
             if not mengen:
                 mengen = [1] * len(artikel_seq)
 
@@ -799,6 +989,11 @@ def main():
                 menge = mengen[index] if index < len(mengen) else 1
                 info = artikel_lookup.get(artikel_name)
                 if not info:
+                    missing_items.append({
+                        "Nr.": get(row, "Nr."),
+                        "Position(en)": get(row, "Position(en)"),
+                        "Rest": artikel_name,
+                    })
                     continue
 
                 ust = info["USt"]
@@ -817,7 +1012,13 @@ def main():
 
                 row_items.append((kategorie, netto, steuer, brutto))
 
-            if not row_items:
+            if not row_items or ust_zeile == "?":
+                row_netto = safe_decimal(get(row, "Netto €"))
+                row_steuer = safe_decimal(get(row, "Steuer €"))
+                row_brutto = safe_decimal(get(row, "Brutto €"))
+                auswertung["Unbekannt"][zahlung]["Netto"] += row_netto
+                auswertung["Unbekannt"][zahlung]["Steuer"] += row_steuer
+                auswertung["Unbekannt"][zahlung]["Brutto"] += row_brutto
                 continue
 
             row_netto = safe_decimal(get(row, "Netto €"))
@@ -931,6 +1132,73 @@ def main():
             float(quantize_money(gesamt_steuer - sheet_steuer)),
             float(quantize_money(gesamt_brutto - sheet_brutto)),
         ])
+
+        if "Fehlende Artikel" in wb.sheetnames:
+            del wb["Fehlende Artikel"]
+        ws_missing = wb.create_sheet("Fehlende Artikel")
+        ws_missing.append(["Nr.", "Position(en)", "Rest"])
+        for cell in ws_missing[1]:
+            cell.font = Font(bold=True)
+        for item in missing_items:
+            ws_missing.append([item.get("Nr."), item.get("Position(en)"), item.get("Rest")])
+
+        if "Mismatch Report" in wb.sheetnames:
+            del wb["Mismatch Report"]
+        ws_mismatch = wb.create_sheet("Mismatch Report")
+        ws_mismatch.append([
+            "Nr.",
+            "Netto CSV",
+            "Steuer CSV",
+            "Brutto CSV",
+            "Netto Excel",
+            "Steuer Excel",
+            "Brutto Excel",
+        ])
+        for cell in ws_mismatch[1]:
+            cell.font = Font(bold=True)
+        for row in mismatch_rows:
+            csv_netto, csv_steuer, csv_brutto = row["CSV"]
+            excel_netto, excel_steuer, excel_brutto = row["Excel"]
+            ws_mismatch.append([
+                row["Nr."],
+                float(csv_netto),
+                float(csv_steuer),
+                float(csv_brutto),
+                float(excel_netto),
+                float(excel_steuer),
+                float(excel_brutto),
+            ])
+
+        if "Umsatzvergleich" in wb.sheetnames:
+            del wb["Umsatzvergleich"]
+        ws_umsatz = wb.create_sheet("Umsatzvergleich")
+        ws_umsatz.append(["Quelle", "Netto", "Steuer", "Brutto"])
+        for cell in ws_umsatz[1]:
+            cell.font = Font(bold=True)
+        if umsatz_totals.get("gesamt"):
+            ws_umsatz.append([
+                "Umsatzübersicht Gesamt",
+                float(umsatz_totals["gesamt"]["netto"]),
+                float(umsatz_totals["gesamt"]["steuer"]),
+                float(umsatz_totals["gesamt"]["brutto"]),
+            ])
+        ws_umsatz.append([
+            "Excel Gesamt",
+            float(quantize_money(gesamt_netto)),
+            float(quantize_money(gesamt_steuer)),
+            float(quantize_money(gesamt_brutto)),
+        ])
+        if umsatz_totals.get("gesamt"):
+            ws_umsatz.append([
+                "Differenz Gesamt",
+                float(quantize_money(gesamt_netto - umsatz_totals["gesamt"]["netto"])),
+                float(quantize_money(gesamt_steuer - umsatz_totals["gesamt"]["steuer"])),
+                float(quantize_money(gesamt_brutto - umsatz_totals["gesamt"]["brutto"])),
+            ])
+        if umsatz_stornos is not None:
+            ws_umsatz.append(["Stornos Umsatzübersicht", umsatz_stornos, "", ""])
+            ws_umsatz.append(["Stornos CSV gefiltert", stornierte_count, "", ""])
+            ws_umsatz.append(["Differenz Stornos", stornierte_count - umsatz_stornos, "", ""])
 
         # Speichern
         wb.save(output_path)
