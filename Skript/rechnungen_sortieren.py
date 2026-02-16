@@ -26,6 +26,42 @@ def normalize(text):
     return " ".join(str(text).lower().strip().split())
 
 
+ALIAS_PREFIXES = (
+    "tharpa buch ",
+    "tharpa kunst: ",
+    "tharpa karte: ",
+    "tharpa ",
+    "buch ",
+    "kunst: ",
+    "karte: ",
+    "sadhana: ",
+    "temple stationary: ",
+)
+
+
+def build_alias_map(rows):
+    alias_map = {}
+    ambiguous = set()
+
+    for row in rows:
+        name_norm = normalize(row["Name*"])
+        for prefix in ALIAS_PREFIXES:
+            if name_norm.startswith(prefix):
+                alias = name_norm[len(prefix) :].strip()
+                if not alias:
+                    continue
+                existing = alias_map.get(alias)
+                if existing and existing != name_norm:
+                    ambiguous.add(alias)
+                else:
+                    alias_map[alias] = name_norm
+
+    for alias in ambiguous:
+        alias_map.pop(alias, None)
+
+    return alias_map
+
+
 def parse_decimal(value):
     return Decimal(str(value).replace(",", "."))
 
@@ -111,6 +147,15 @@ def parse_umsatzuebersicht(path):
                     totals[ust_digits] = parsed
 
     return totals, stornos_count
+
+
+def map_auswertung_category(raw_category):
+    normalized = normalize(raw_category)
+    if "tharpa" in normalized:
+        return "Tharpa"
+    if "café" in normalized or "cafe" in normalized:
+        return "Café"
+    return "Shop"
 
 
 def extract_positions_sequential(text, artikel_namen):
@@ -588,9 +633,10 @@ def main():
         pdf_totals = parse_pdf_totals(sammelrechnung_path)
 
         artikel_df["Name_norm"] = artikel_df["Name*"].apply(normalize)
+        alias_map = build_alias_map(artikel_df.to_dict("records"))
 
         artikel_namen = sorted(
-            artikel_df["Name_norm"].tolist(),
+            set(artikel_df["Name_norm"].tolist()) | set(alias_map.keys()),
             key=len,
             reverse=True
         )
@@ -674,6 +720,10 @@ def main():
 
             for artikel_norm, menge in zip(artikel_seq, mengen):
                 daten = artikel_map.get(artikel_norm)
+                if daten is None:
+                    alias_target = alias_map.get(artikel_norm)
+                    if alias_target:
+                        daten = artikel_map.get(alias_target)
                 if daten is None:
                     artikel_unknown.append(f"Unbekannt: {artikel_norm}")
                     mengen_unknown.append(str(menge))
@@ -956,7 +1006,12 @@ def main():
                 "Netto": parse_decimal(a["Verkaufspreis Netto"]),
                 "Brutto": parse_decimal(a["Verkaufspreis Brutto*"])
             }
-        artikel_namen_phase2 = sorted(artikel_lookup.keys(), key=len, reverse=True)
+        alias_lookup = build_alias_map(artikel_df.to_dict("records"))
+        artikel_namen_phase2 = sorted(
+            set(artikel_lookup.keys()) | set(alias_lookup.keys()),
+            key=len,
+            reverse=True
+        )
 
         # Auswertung: Kategorie → Zahlungsart → Summen
         auswertung = defaultdict(lambda: defaultdict(lambda: {
@@ -989,6 +1044,10 @@ def main():
                 menge = mengen[index] if index < len(mengen) else 1
                 info = artikel_lookup.get(artikel_name)
                 if not info:
+                    alias_target = alias_lookup.get(artikel_name)
+                    if alias_target:
+                        info = artikel_lookup.get(alias_target)
+                if not info:
                     missing_items.append({
                         "Nr.": get(row, "Nr."),
                         "Position(en)": get(row, "Position(en)"),
@@ -1004,7 +1063,8 @@ def main():
                     netto = brutto
                     steuer = Decimal("0.00")
                 else:
-                    kategorie = f"{info['Kategorie']} {ust}%"
+                    base_category = map_auswertung_category(info["Kategorie"])
+                    kategorie = f"{base_category} {ust}%"
                     steuersatz = Decimal(int(ust)) / Decimal("100")
                     brutto = quantize_money(info["Brutto"] * Decimal(menge))
                     netto = quantize_money(brutto / (Decimal("1") + steuersatz))

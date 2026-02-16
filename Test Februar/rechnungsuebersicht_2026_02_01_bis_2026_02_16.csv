@@ -1,0 +1,99 @@
+﻿Nr.;Datum;Modus;"Position(en) Anzahl";Position(en);"Position(en) USt %";Zahlungsart;"Netto €";"Steuer €";"Brutto €";"Trinkgeld €";Storniert;"Storno Nr.";Stornodatum;"Storno Brutto €";"Storno Trinkgeld €";Kunde;"Kunde - Adresse";KassiererIn;Umsatzzuweisung
+19869;"2026-02-05 19:26:57";Normal;"1| 1";"Tharpa Sadhana Lehrfähigkeiten, Spende";"7, 0";Bar;9,74;0,26;10,00;0,00;Ja;337;"2026-02-05 19:27:51";-10,00;0,00;;;Café;
+19870;"2026-02-05 19:28:32";Normal;"1| 1";"Tharpa Sadhana Lehrfähigkeiten, Spende";"7, 0";Bar;4,74;0,26;5,00;0,00;Nein;;;;;;;Café;
+19871;"2026-02-05 20:51:57";Normal;1;"schoko Reiswaffeln";7;Bar;1,87;0,13;2,00;0,00;Nein;;;;;;;Shop;
+19872;"2026-02-06 16:49:27";Normal;1;Americano;19;Bar;2,10;0,40;2,50;0,00;Ja;338;"2026-02-06 16:50:44";-2,50;0,00;;;Café;
+19873;"2026-02-07 13:40:52";Normal;"1| 1| 1";"ApfelChai heiss, Heiße Schokolade, Zitronen-Schnitte vegan";"19, 19, 7";Bar;7,80;1,20;9,00;0,00;Nein;;;;;;;Café;
+19874;"2026-02-07 13:43:47";Normal;1;Americano;19;Bar;2,10;0,40;2,50;0,00;Nein;;;;;;;Café;
+19875;"2026-02-07 14:12:49";Normal;"1| 1";"Himbeer-Käse-Sahne-Torte, Filterkaffee  Tasse";"7, 19";Bar;5,84;0,66;6,50;0,00;Nein;;;;;;;Café;
+19876;"2026-02-07 14:28:57";Normal;"1| 1| 1| 2| 1";"Brownie, Zitronen-Schnitte vegan, Mango Creme Fraiche, Milchkaffee, Extra Sahne";"7, 7, 7, 19, 19";Bar;13,03;1,67;14,70;0,00;Nein;;;;;;;Café;
+19877;"2026-02-07 14:41:59";Normal;"1| 1";"Cappuccino, Himbeer-Käse-Sahne-Torte";"19, 7";Bar;6,26;0,74;7,00;0,00;Nein;;;;;;;Café;
+19878;"2026-02-07 14:43:21";Normal;"1| 1| 1";"Kurkuma Latte, Hafermilch, Himbeer-Käse-Sahne-Torte";"19, 19, 7";Kreditkarte;6,68;0,82;7,50;0,00;Nein;;;;;;;Café;
+19879;"2026-02-07 15:02:48";Normal;1;"Apfelkuchen, vegan";7;Bar;3,27;0,23;3,50;0,00;Nein;;;;;;;Café;
+19880;"2026-02-07 15:05:10";Normal;"1| 1";"Cappuccino, Himbeer-Käse-Sahne-Torte";"19, 7";Kreditkarte;6,26;0,74;7,00;0,00;Nein;;;;;;;Café;
+19881;"2026-02-07 15:16:15";Normal;"1| 1";"Chai Oriental, Mango Creme Fraiche";"19, 7";Kreditkarte;4,62;0,68;5,30;0,00;Nein;;;;;;;Café;
+19882;"2026-02-07 15:19:57";Normal;"1| 1";"Tharpa Sadhana: Der Yoga von Buddha Amitayus, Mittelgroße Platte aus gefärbtem fuchsiafarbenem Achat";"7, 19";EC-Karte;9,02;0,93;9,95;0,00;Nein;;;;;;;Shop;
+19883;"2026-02-07 16:07:38";Normal;"1| 1| 2| 1";"Himbeer-Käse-Sahne-Torte, Apfelkuchen, vegan, Chai Oriental, Hafermilch";"7, 7, 19, 19";Bar;12,89;1,61;14,50;0,00;Nein;;;;;;;Café;
+19884;"2026-02-07 16:28:20";Normal;"1| 1";"Café Crema, Brownie";"19, 7";Bar;4,81;0,59;5,40;0,00;Nein;;;;;;;Café;
+19885;"2026-02-07 16:50:18";Normal;"1| 1";"Tharpa Sadhana: Herzjuwel, Tharpa Buch: Herzjuwel";"7, 7";Bar;19,58;1,37;20,95;0,00;Nein;;;;;;;Shop;
+19886;"2026-02-07 16:53:33";Normal;"1| 1";"Kartoffelchips Paprika 125g, Trafo, Handcooked Chips Salt & Vinegar 125g, Trafo Niederland";"7, 7";Bar;4,30;0,30;4,60;0,00;Nein;;;;;;;Shop;
+19887;"2026-02-07 16:57:56";Normal;1;Himbeer-Käse-Sahne-Torte;7;Bar;3,74;0,26;4,00;0,00;Nein;;;;;;;Café;
+19888;"2026-02-08 11:06:36";Normal;1;"Tharpa Buch EN: Great Treasury of Merit (pb) 2nd ed";7;Bar;14,95;1,05;16,00;0,00;Nein;;;;;;;Shop;
+19889;"2026-02-08 11:15:43";Normal;"1| 1| 1| 1";"Croissant mit Butter, Milchkaffee, Latte Macchiato, Hafermilch";"7, 19, 19, 19";Bar;8,59;1,31;9,90;0,00;Nein;;;;;;;Café;Café
+19890;"2026-02-08 11:24:54";Normal;1;"Heiße Schokolade";19;Bar;2,94;0,56;3,50;0,00;Nein;;;;;;;Café;Café
+19891;"2026-02-08 12:47:56";Normal;"1| 1| 1";"Weißer Salbei Smudge mit Zimt S 2er-set, Edelsteinbaum 78382 -+ 8cm, Tharpa Kunst: A6 Vajrayogini 3 (golden) - Postkarte";"19, 19, 19";Bar;9,66;1,84;11,50;0,00;Nein;;;;;;;Shop;
+19892;"2026-02-08 12:51:19";Normal;1;Himbeer-Käse-Sahne-Torte;7;Bar;3,74;0,26;4,00;0,00;Nein;;;;;;;Café;Café
+19893;"2026-02-08 12:51:46";Normal;1;"Mala Brokat Beutel ALL M 9001";19;Bar;3,36;0,64;4,00;0,00;Nein;;;;;;;Shop;
+19894;"2026-02-08 13:00:29";Normal;1;"Filterkaffee  Tasse";19;Bar;2,10;0,40;2,50;0,00;Nein;;;;;;;Café;Café
+19895;"2026-02-08 13:01:35";Normal;3;"Regenbogen-Kristalle Kreis, Tropfen, Zapfen 9716";19;Bar;10,08;1,92;12,00;0,00;Nein;;;;;;;Shop;
+19896;"2026-02-08 13:30:43";Normal;"1| 1| 1| 1";"ApfelChai heiss, Cappuccino, Apfelkuchen, vegan, Croissant mit Butter";"19, 19, 7, 7";Bar;11,02;1,38;12,40;0,00;Nein;;;;;;;Café;Café
+19897;"2026-02-08 13:42:01";Normal;"1| 1| 1| 1| 1";"Americano, Chai Oriental, Hafermilch, Apfelkuchen, vegan, Himbeer-Käse-Sahne-Torte";"19, 19, 19, 7, 7";Kreditkarte;12,05;1,45;13,50;0,00;Nein;;;;;;;Café;Café
+19898;"2026-02-08 13:55:49";Normal;"1| 1| 1| 1| 1";"Himbeer-Käse-Sahne-Torte, Chai Oriental, Hafermilch, Cappuccino, Pfirsich Käse Sahne Schnitte glutenfrei laktosefrei";"7, 19, 19, 19, 7";Kreditkarte;13,41;1,59;15,00;0,00;Nein;;;;;;;Café;Café
+19899;"2026-02-08 14:03:45";Normal;1;Tee;19;Bar;2,10;0,40;2,50;0,00;Nein;;;;;;;Café;Café
+19900;"2026-02-08 14:19:13";Normal;"2| 1";"Tee, Croissant, einfach";"19, 7";Bar;6,54;0,96;7,50;0,00;Nein;;;;;;;Café;Café
+19901;"2026-02-08 14:24:06";Normal;"1| 1| 1";"Americano, Koffeinfrei, Hafermilch";"19, 19, 19";Bar;2,10;0,40;2,50;0,00;Nein;;;;;;;Café;Café
+19902;"2026-02-08 14:35:03";Normal;"1| 1| 2";"Espresso Doppio, Latte Macchiato, Apfelkuchen, vegan";"19, 19, 7";Bar;12,00;1,50;13,50;0,00;Nein;;;;;;;Café;Café
+19903;"2026-02-08 14:36:48";Normal;"1| 1| 1| 1";"Americano, Tee, Apfelkuchen, vegan, Pfirsich Käse Sahne Schnitte glutenfrei laktosefrei";"19, 19, 7, 7";Bar;11,68;1,32;13,00;0,00;Nein;;;;;;;Café;Café
+19904;"2026-02-08 14:59:22";Normal;"1| 1";"Tee, Mango Creme Fraiche";"19, 7";Bar;3,78;0,52;4,30;0,00;Nein;;;;;;;Café;Café
+19905;"2026-02-08 15:13:59";Normal;"2| 1| 1";"Milchkaffee, Pfirsich Käse Sahne Schnitte glutenfrei laktosefrei, Himbeer-Käse-Sahne-Torte";"19, 7, 7";Kreditkarte;13,83;1,67;15,50;0,00;Nein;;;;;;;Café;Café
+19906;"2026-02-08 15:15:11";Normal;"1| 1| 1| 1| 1";"Apfelkuchen, vegan, Pfirsich Käse Sahne Schnitte glutenfrei laktosefrei, Latte Macchiato, Milchkaffee, Koffeinfrei";"7, 7, 19, 19, 19";Bar;13,36;1,64;15,00;0,00;Nein;;;;;;;Café;Café
+19907;"2026-02-08 15:25:43";Normal;"1| 1";"Tharpa Sadhana: Avalokiteshvara, Tzampas Golden Milk 40g";"7, 19";EC-Karte;8,39;0,81;9,20;0,00;Nein;;;;;;;Shop;
+19908;"2026-02-08 15:43:00";Normal;1;"Filterkaffee  Tasse";19;Bar;2,10;0,40;2,50;0,00;Nein;;;;;;;Café;Café
+19909;"2026-02-08 15:51:25";Normal;"1| 2| 1";"Baum des Lebens mit Regenbogen-Kristalltropfen weiß, Tasse Herz, Lotus, Auge, Regenbogen 11644, Tharpa Lesezeichen gelb";"19, 19, 7";EC-Karte;18,58;3,42;22,00;0,00;Nein;;;;;;;Shop;
+19910;"2026-02-08 15:55:50";Normal;"1| 2| 1";"Baum des Lebens mit Regenbogen-Kristalltropfen weiß, Tasse Herz, Lotus, Auge, Regenbogen 11644, Tharpa Lesezeichen gelb";"19, 19, 7";Bar;18,58;3,42;22,00;0,00;Nein;;;;;;;Shop;
+19911;"2026-02-08 15:57:09";Normal;1;Americano;19;Bar;2,10;0,40;2,50;0,00;Nein;;;;;;;Café;Café
+19912;"2026-02-08 15:58:06";Normal;1;"Tasse Herz, Lotus, Auge, Regenbogen 11644";19;Bar;6,72;1,28;8,00;0,00;Nein;;;;;;;Shop;
+19913;"2026-02-08 16:07:15";Normal;"1| 1| 1| 1| 1";"Americano, Koffeinfrei, Hafermilch, Extra Sahne, Himbeer-Käse-Sahne-Torte";"19, 19, 19, 19, 7";Kreditkarte;6,26;0,74;7,00;0,00;Nein;;;;;;;Café;Café
+19914;"2026-02-08 16:15:44";Normal;1;Himbeer-Käse-Sahne-Torte;7;Kreditkarte;3,74;0,26;4,00;0,00;Nein;;;;;;;Café;Café
+19915;"2026-02-08 16:42:22";Normal;"1| 1";"Tharpa Sadhana: Avalokiteshvara, Tzampas Golden Milk 40g";"7, 19";Bar;8,39;0,81;9,20;0,00;Nein;;;;;;;Shop;
+19916;"2026-02-08 17:10:24";Normal;"1| 1";"gemstone Mala knotted 7229, Notizbuch veer&moon 9407";"19, 19";Bar;56,30;10,70;67,00;0,00;Nein;;;;;;;Shop;
+19917;"2026-02-12 18:46:10";Normal;1;"Massagegerät all fabre 7779";19;EC-Karte;7,56;1,44;9,00;0,00;Nein;;;;;;;Shop;
+19918;"2026-02-14 11:55:01";Normal;"1| 2| 1| 2| 1";"Laugenbrezel mit Butter, Himbeer Brownie, glutenfrei, Heiße Schokolade, Hafermilch, Kurkuma Latte";"7, 7, 19, 19, 19";Bar;14,48;1,72;16,20;0,00;Nein;;;;;;;Café;
+19919;"2026-02-14 12:47:02";Normal;1;Cappuccino;19;Bar;2,52;0,48;3,00;0,00;Nein;;;;;;;Café;
+19920;"2026-02-14 13:06:57";Normal;"1| 1| 1| 1";"Mango- Joghurt-Crunch Torte, Schokokuchen, Americano, Latte Macchiato";"7, 7, 19, 19";Bar;12,42;1,48;13,90;0,00;Nein;;;;;;;Café;
+19921;"2026-02-14 14:01:56";Normal;"2| 1| 2| 1| 1";"Milchkaffee, Zitrone Garten-Limonade, Schokokuchen, Mango- Joghurt-Crunch Torte, Extra Sahne";"19, 19, 7, 7, 19";Kreditkarte;18,59;2,31;20,90;0,00;Nein;;;;;;;Café;
+19922;"2026-02-14 14:07:38";Normal;"1| 1| 2";"Cappuccino, Heiße Schokolade, Mango- Joghurt-Crunch Torte";"19, 19, 7";Bar;14,62;1,68;16,30;0,00;Nein;;;;;;;Café;
+19923;"2026-02-14 14:14:15";Normal;"1| 2| 1| 2";"Cappuccino, Hafermilch, Latte Macchiato, Apfelsaft-Schorle";"19, 19, 19, 19";Bar;9,66;1,84;11,50;0,50;Ja;339;"2026-02-14 14:22:39";-11,50;-0,50;;;Café;
+19924;"2026-02-14 14:15:34";Normal;"1| 1| 2| 2";"Cappuccino, Latte Macchiato, Hafermilch, Apfelsaft-Schorle";"19, 19, 19, 19";Kreditkarte;9,66;1,84;11,50;0,50;Nein;;;;;;;Café;
+19925;"2026-02-14 14:30:07";Normal;1;Americano;19;Bar;2,10;0,40;2,50;0,00;Nein;;;;;;;Café;
+19926;"2026-02-14 14:41:28";Normal;"1| 1| 1| 1| 1";"Schokoladen-Tarte, Mango Creme Fraiche, Cashew-Quinoa Ecke, vegan, Milchkaffee, Café Crema";"7, 7, 7, 19, 19";Bar;13,07;1,53;14,60;0,00;Nein;;;;;;;Café;
+19927;"2026-02-14 14:50:28";Normal;"1| 1| 2| 1";"Himbeer Brownie, glutenfrei, Mohnschnitte Bio, Tee, Cappuccino";"7, 7, 19, 19";Kreditkarte;13,26;1,74;15,00;0,00;Nein;;;;;;;Café;
+19928;"2026-02-14 14:56:19";Normal;1;"Wrist Mala Steine/various  7206";19;Bar;8,40;1,60;10,00;0,00;Nein;;;;;;;Shop;
+19929;"2026-02-14 15:01:53";Normal;1;Schokoladen-Tarte;7;Bar;2,80;0,20;3,00;0,00;Nein;;;;;;;Café;
+19930;"2026-02-14 15:16:15";Normal;2;"Bienenwohl - 3er";19;Bar;5,88;1,12;7,00;0,00;Nein;;;;;;;Shop;
+19931;"2026-02-14 15:41:23";Normal;"1| 1";"Cappuccino, Himbeer Brownie, glutenfrei";"19, 7";Kreditkarte;5,79;0,71;6,50;0,00;Nein;;;;;;;Café;
+19932;"2026-02-14 15:48:00";Normal;"1| 1";"Weißer Selenit Herz Sorgenstein  -+7cm, Samtbeutel";"19, 19";EC-Karte;21,84;4,16;26,00;0,00;Nein;;;;;;;Shop;
+19933;"2026-02-14 15:58:47";Normal;"1| 1";"Schwarze-Johannisbeere Garten-Limonade, Mango Creme Fraiche";"19, 7";Bar;3,78;0,52;4,30;0,00;Nein;;;;;;;Café;
+19934;"2026-02-14 16:01:16";Normal;1;Tee;19;Bar;2,10;0,40;2,50;0,00;Nein;;;;;;;Café;
+19935;"2026-02-14 16:06:00";Normal;"2| 2";"Americano, Mango- Joghurt-Crunch Torte";"19, 7";Kreditkarte;13,36;1,44;14,80;0,00;Nein;;;;;;;Café;
+19936;"2026-02-14 16:26:05";Normal;1;"Laugenbrezel mit Butter";7;Bar;2,06;0,14;2,20;0,00;Nein;;;;;;;Café;
+19937;"2026-02-14 16:26:48";Normal;1;"Laugenbrezel mit Butter";7;Bar;2,06;0,14;2,20;0,00;Nein;;;;;;;Café;
+19938;"2026-02-15 12:17:16";Normal;"1| 1| 1| 1";"Mango- Joghurt-Crunch Torte, Latte Macchiato, Milchkaffee, Pink Grapefruit Garten-Limonade";"7, 19, 19, 19";Bar;12,56;1,84;14,40;0,00;Nein;;;;;;;Café;Café
+19939;"2026-02-15 12:40:41";Normal;1;"Laugenbrezel mit Butter";7;Bar;2,06;0,14;2,20;0,80;Nein;;;;;;;Café;Café
+19940;"2026-02-15 12:53:35";Normal;"1| 1| 1";"Kurkuma Latte, Hafermilch, Filterkaffee  Tasse";"19, 19, 19";Bar;5,04;0,96;6,00;0,00;Nein;;;;;;;Café;Café
+19941;"2026-02-15 12:57:40";Normal;"2| 2| 1| 1";"Latte Macchiato, Hafermilch, Cashew-Quinoa Ecke, vegan, Himbeer Brownie, glutenfrei";"19, 19, 7, 7";Kreditkarte;12,70;1,60;14,30;0,00;Nein;;;;;;;Café;Café
+19942;"2026-02-15 13:25:44";Normal;"1| 1| 1| 1";"Americano, Cappuccino, Mango Creme Fraiche, Hafermilch";"19, 19, 7, 19";Bar;6,30;1,00;7,30;0,00;Nein;;;;;;;Café;Café
+19943;"2026-02-15 13:29:22";Normal;"2| 2";"Kurkuma Latte, Mango- Joghurt-Crunch Torte";"19, 7";Kreditkarte;15,04;1,76;16,80;0,00;Nein;;;;;;;Café;Café
+19944;"2026-02-15 13:30:21";Normal;"2| 2";"Kurkuma Latte, Mango- Joghurt-Crunch Torte";"19, 7";Kreditkarte;15,04;1,76;16,80;0,00;Nein;;;;;;;Café;Café
+19945;"2026-02-15 13:35:41";Normal;"1| 1| 1";"Chai Oriental, Heiße Schokolade, Pflaumen Streusel Schnitte";"19, 19, 7";Bar;8,87;1,33;10,20;0,00;Nein;;;;;;;Café;Café
+19946;"2026-02-15 13:41:40";Normal;1;Schokokuchen;7;Bar;2,80;0,20;3,00;0,00;Nein;;;;;;;Café;Café
+19947;"2026-02-15 13:45:24";Normal;1;"Mango- Joghurt-Crunch Torte";7;Bar;4,58;0,32;4,90;0,00;Nein;;;;;;;Café;Café
+19948;"2026-02-15 13:48:01";Normal;1;"Pink Grapefruit Garten-Limonade";19;Bar;2,10;0,40;2,50;0,00;Nein;;;;;;;Café;Café
+19949;"2026-02-15 13:58:09";Normal;"2| 1";"Cappuccino, Extra Shot";"19, 19";Bar;5,88;1,12;7,00;0,00;Nein;;;;;;;Café;Café
+19950;"2026-02-15 14:02:33";Normal;"1| 1| 1| 1| 1";"Latte Macchiato, Mohnschnitte Bio, Mango Creme Fraiche, Pflaumen Streusel Schnitte, Heiße Schokolade";"19, 7, 7, 7, 19";Kreditkarte;13,82;1,68;15,50;0,00;Nein;;;;;;;Café;Café
+19951;"2026-02-15 14:03:41";Normal;"1| 1";"Himbeer Brownie, glutenfrei, Pflaumen Streusel Schnitte";"7, 7";Kreditkarte;6,26;0,44;6,70;0,00;Nein;;;;;;;Café;Café
+19952;"2026-02-15 14:06:55";Normal;"1| 1";"Schokokuchen, Milchkaffee";"7, 19";Kreditkarte;5,74;0,76;6,50;0,00;Nein;;;;;;;Café;Café
+19953;"2026-02-15 14:31:11";Normal;1;Americano;19;Kreditkarte;2,10;0,40;2,50;0,00;Nein;;;;;;;Café;Café
+19954;"2026-02-15 14:32:31";Normal;1;Schokokuchen;7;Bar;2,80;0,20;3,00;0,00;Nein;;;;;;;Café;Café
+19955;"2026-02-15 14:35:39";Normal;"1| 1| 2";"Schokokuchen, Mohnschnitte Bio, Americano";"7, 7, 19";Bar;10,27;1,23;11,50;0,00;Nein;;;;;;;Café;Café
+19956;"2026-02-15 14:59:06";Normal;"1| 1| 1| 2";"Latte Macchiato, Milchkaffee, Koffeinfrei, Schokokuchen";"19, 19, 19, 7";Bar;11,49;1,51;13,00;0,00;Nein;;;;;;;Café;Café
+19957;"2026-02-15 15:13:12";Normal;"1| 1| 1| 1";"Milchkaffee, Cappuccino, Extra Shot, Schokokuchen";"19, 19, 19, 7";Bar;9,10;1,40;10,50;0,00;Nein;;;;;;;Café;Café
+19958;"2026-02-15 15:17:12";Normal;"1| 2| 1| 1| 1";"Heiße Schokolade, Himbeer Brownie, glutenfrei, Filterkaffee  Tasse, Latte Macchiato, Pflaumen Streusel Schnitte";"19, 7, 19, 19, 7";Bar;17,51;2,19;19,70;0,00;Nein;;;;;;;Café;Café
+19959;"2026-02-15 15:18:27";Normal;"1| 1| 1| 1";"Cappuccino, Latte Macchiato, Pflaumen Streusel Schnitte, Mohnschnitte Bio";"19, 19, 7, 7";Bar;11,72;1,48;13,20;0,00;Nein;;;;;;;Café;Café
+19960;"2026-02-15 15:25:23";Normal;1;Cappuccino;19;Kreditkarte;2,52;0,48;3,00;0,00;Nein;;;;;;;Café;Café
+19961;"2026-02-15 15:45:29";Normal;"1| 1| 1| 1";"Cashew-Quinoa Ecke, vegan, Mohnschnitte Bio, ApfelChai heiss, Filterkaffee  Tasse";"7, 7, 19, 19";Bar;11,44;1,36;12,80;0,00;Nein;;;;;;;Café;Café
+19962;"2026-02-15 15:50:02";Normal;"1| 1";"Samenbomben - 1er, Hautfarben Buntstifte";"19, 19";Bar;13,44;2,56;16,00;0,00;Nein;;;;;;;Shop;
+19963;"2026-02-15 16:02:58";Normal;"1| 1";"Milchkaffee, Mohnschnitte Bio";"19, 7";Bar;6,21;0,79;7,00;0,00;Nein;;;;;;;Café;Café
+19964;"2026-02-15 16:16:26";Normal;"1| 3| 1| 1";"Paisiner Jaspis Armband 8mm, Wrist Mala  various 7282, Steinmix wrist mala 7728, Samenkarte Veer &Moon 9604";"19, 19, 19, 19";EC-Karte;27,27;5,18;32,45;0,00;Nein;;;;;;;Shop;
+19965;"2026-02-15 16:23:27";Normal;1;Tee;19;Bar;2,10;0,40;2,50;0,00;Nein;;;;;;;Café;Café
+19966;"2026-02-15 16:45:52";Normal;"1| 1| 1| 1| 1";"Tharpa Sadhana: Ein reines Leben, Tharpa Kunst Guru Sumati Buddha Heruka (mit 6 Tempeln) - A6, Mala Brokat Beutel ALL M 9001, Pistacchio 'Dubai Style' Schokoriegel 40g, Vivani, Espresso Biscotti Schokoriegel 40g, Vivani Deutschland";"7, 19, 19, 7, 7";Bar;14,24;1,56;15,80;0,00;Nein;;;;;;;Shop;

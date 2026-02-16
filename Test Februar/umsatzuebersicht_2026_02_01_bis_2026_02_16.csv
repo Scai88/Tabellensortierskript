@@ -1,0 +1,239 @@
+﻿"Alle Zahlungsarten"
+
+"Anzahl der Belege/Rechnungen"
+Typ;Anzahl
+Rechnungen/Belege;98
+Stornierungen;3
+Gesamt;101
+
+"Umsätze nach Umsatzsteuer-Sätzen"
+USt;"Netto €";"Steuer €";"Brutto €"
+19 %;480,37;91,43;571,80
+7 %;361,24;25,31;386,55
+0 %;1,00;0,00;1,00
+Gesamt;842,61;116,74;959,35
+
+"Umsätze nach Zahlungsart"
+Zahlungsart;"Brutto €"
+Bar;625,15
+Kreditkarte;225,60
+EC-Karte;108,60
+Gesamt;959,35
+
+
+"Alle Zahlungsarten exkl. Rechnung (unbar)"
+
+"Anzahl der Belege/Rechnungen"
+Typ;Anzahl
+Rechnungen/Belege;98
+Stornierungen;3
+Gesamt;101
+
+"Umsätze nach Umsatzsteuer-Sätzen"
+USt;"Netto €";"Steuer €";"Brutto €"
+19 %;480,37;91,43;571,80
+7 %;361,24;25,31;386,55
+0 %;1,00;0,00;1,00
+Gesamt;842,61;116,74;959,35
+
+"Umsätze nach Zahlungsart"
+Zahlungsart;"Brutto €"
+Bar;625,15
+Kreditkarte;225,60
+EC-Karte;108,60
+Gesamt;959,35
+
+
+"Zahlungsart Rechnung (unbar)"
+
+"Anzahl der Belege/Rechnungen"
+Typ;Anzahl
+Rechnungen/Belege;0
+Stornierungen;0
+Gesamt;0
+
+"Umsätze nach Umsatzsteuer-Sätzen"
+USt;"Netto €";"Steuer €";"Brutto €"
+Gesamt;0,00;0,00;0,00
+
+"Umsätze nach Zahlungsart"
+Zahlungsart;"Brutto €"
+Gesamt;0,00
+
+
+
+Artikel/Dienstleistungs-Auswertung
+"Alle Zahlungsarten"
+
+Artikel/DL;"USt %";Bezeichnung;Menge;"Brutto €"
+Artikel;19 %;Americano;14,000;35,00
+Artikel;19 %;"ApfelChai heiss";3,000;9,00
+Artikel;19 %;Apfelsaft-Schorle;2,000;5,00
+Artikel;19 %;"Baum des Lebens mit Regenbogen-Kristalltropfen weiß";2,000;10,00
+Artikel;19 %;"Bienenwohl - 3er";2,000;7,00
+Artikel;19 %;"Café Crema";2,000;5,00
+Artikel;19 %;Cappuccino;15,000;45,00
+Artikel;19 %;"Chai Oriental";6,000;21,00
+Artikel;19 %;"Edelsteinbaum 78382 -+ 8cm";1,000;6,00
+Artikel;19 %;"Espresso Doppio";1,000;3,00
+Artikel;19 %;"Extra Sahne";3,000;1,50
+Artikel;19 %;"Extra Shot";2,000;2,00
+Artikel;19 %;"Filterkaffee  Tasse";6,000;15,00
+Artikel;19 %;"gemstone Mala knotted 7229";1,000;55,00
+Artikel;19 %;Hafermilch;15,000;0,00
+Artikel;19 %;"Hautfarben Buntstifte";1,000;13,50
+Artikel;19 %;"Heiße Schokolade";7,000;24,50
+Artikel;19 %;Koffeinfrei;4,000;0,00
+Artikel;19 %;"Kurkuma Latte";7,000;24,50
+Artikel;19 %;"Latte Macchiato";12,000;42,00
+Artikel;19 %;"Mala Brokat Beutel ALL M 9001";2,000;8,00
+Artikel;19 %;"Massagegerät all fabre 7779";1,000;9,00
+Artikel;19 %;Milchkaffee;14,000;49,00
+Artikel;19 %;"Mittelgroße Platte aus gefärbtem fuchsiafarbenem Achat";1,000;2,95
+Artikel;19 %;"Notizbuch veer&moon 9407";1,000;12,00
+Artikel;19 %;"Paisiner Jaspis Armband 8mm";1,000;4,95
+Artikel;19 %;"Pink Grapefruit Garten-Limonade";2,000;5,00
+Artikel;19 %;"Regenbogen-Kristalle Kreis, Tropfen, Zapfen 9716";3,000;12,00
+Artikel;19 %;"Samenbomben - 1er";1,000;2,50
+Artikel;19 %;"Samenkarte Veer &Moon 9604";1,000;4,50
+Artikel;19 %;Samtbeutel;1,000;14,00
+Artikel;19 %;"Schwarze-Johannisbeere Garten-Limonade";1,000;2,50
+Artikel;19 %;"Steinmix wrist mala 7728";1,000;8,00
+Artikel;19 %;"Tasse Herz, Lotus, Auge, Regenbogen 11644";5,000;40,00
+Artikel;19 %;Tee;9,000;22,50
+Artikel;19 %;"Tharpa Kunst Guru Sumati Buddha Heruka (mit 6 Tempeln) - A6";1,000;1,50
+Artikel;19 %;"Tharpa Kunst: A6 Vajrayogini 3 (golden) - Postkarte";1,000;1,50
+Artikel;19 %;"Tzampas Golden Milk 40g";2,000;4,40
+Artikel;19 %;"Weißer Salbei Smudge mit Zimt S 2er-set";1,000;4,00
+Artikel;19 %;"Weißer Selenit Herz Sorgenstein  -+7cm";1,000;12,00
+Artikel;19 %;"Wrist Mala  various 7282";3,000;15,00
+Artikel;19 %;"Wrist Mala Steine/various  7206";1,000;10,00
+Artikel;19 %;"Zitrone Garten-Limonade";1,000;2,50
+Artikel;7 %;"Apfelkuchen, vegan";8,000;28,00
+Artikel;7 %;Brownie;2,000;5,80
+Artikel;7 %;"Cashew-Quinoa Ecke, vegan";3,000;11,40
+Artikel;7 %;"Croissant mit Butter";2,000;5,80
+Artikel;7 %;"Croissant, einfach";1,000;2,50
+Artikel;7 %;"Espresso Biscotti Schokoriegel 40g, Vivani Deutschland";1,000;1,50
+Artikel;7 %;"Handcooked Chips Salt & Vinegar 125g, Trafo Niederland";1,000;2,50
+Artikel;7 %;"Himbeer Brownie, glutenfrei";8,000;28,00
+Artikel;7 %;Himbeer-Käse-Sahne-Torte;12,000;48,00
+Artikel;7 %;"Kartoffelchips Paprika 125g, Trafo";1,000;2,10
+Artikel;7 %;"Laugenbrezel mit Butter";4,000;8,80
+Artikel;7 %;"Mango Creme Fraiche";7,000;12,60
+Artikel;7 %;"Mango- Joghurt-Crunch Torte";12,000;58,80
+Artikel;7 %;"Mohnschnitte Bio";6,000;21,00
+Artikel;7 %;"Pfirsich Käse Sahne Schnitte glutenfrei laktosefrei";4,000;18,00
+Artikel;7 %;"Pflaumen Streusel Schnitte";5,000;16,00
+Artikel;7 %;"Pistacchio 'Dubai Style' Schokoriegel 40g, Vivani";1,000;1,80
+Artikel;7 %;"schoko Reiswaffeln";1,000;2,00
+Artikel;7 %;Schokokuchen;10,000;30,00
+Artikel;7 %;Schokoladen-Tarte;2,000;6,00
+Artikel;7 %;"Tharpa Buch EN: Great Treasury of Merit (pb) 2nd ed";1,000;16,00
+Artikel;7 %;"Tharpa Buch: Herzjuwel";1,000;13,95
+Artikel;7 %;"Tharpa Lesezeichen gelb";2,000;2,00
+Artikel;7 %;"Tharpa Sadhana Lehrfähigkeiten";1,000;4,00
+Artikel;7 %;"Tharpa Sadhana: Avalokiteshvara";2,000;14,00
+Artikel;7 %;"Tharpa Sadhana: Der Yoga von Buddha Amitayus";1,000;7,00
+Artikel;7 %;"Tharpa Sadhana: Ein reines Leben";1,000;7,00
+Artikel;7 %;"Tharpa Sadhana: Herzjuwel";1,000;7,00
+Artikel;7 %;"Zitronen-Schnitte vegan";2,000;5,00
+Artikel;0 %;Spende;1,000;1,00
+Gesamtrabatt;;;;-0,00
+Gesamt;;;265,000;959,35
+
+"* Durchlaufender Posten"
+
+
+
+Kategorie-Auswertung
+"Alle Zahlungsarten"
+
+Artikel
+Kategorie;"USt %";Bezeichnung;Menge;"Brutto €"
+Café;7 %;"Apfelkuchen, vegan";8,000;28,00
+Café;7 %;Brownie;2,000;5,80
+Café;7 %;"Cashew-Quinoa Ecke, vegan";3,000;11,40
+Café;7 %;"Croissant mit Butter";2,000;5,80
+Café;7 %;"Croissant, einfach";1,000;2,50
+Café;7 %;"Himbeer Brownie, glutenfrei";8,000;28,00
+Café;7 %;Himbeer-Käse-Sahne-Torte;12,000;48,00
+Café;7 %;"Laugenbrezel mit Butter";4,000;8,80
+Café;7 %;"Mango Creme Fraiche";7,000;12,60
+Café;7 %;"Mango- Joghurt-Crunch Torte";12,000;58,80
+Café;7 %;"Mohnschnitte Bio";6,000;21,00
+Café;7 %;"Pfirsich Käse Sahne Schnitte glutenfrei laktosefrei";4,000;18,00
+Café;7 %;"Pflaumen Streusel Schnitte";5,000;16,00
+Café;7 %;Schokokuchen;10,000;30,00
+Café;7 %;Schokoladen-Tarte;2,000;6,00
+Café;7 %;"Zitronen-Schnitte vegan";2,000;5,00
+Café;19 %;Americano;14,000;35,00
+Café;19 %;"ApfelChai heiss";3,000;9,00
+Café;19 %;Apfelsaft-Schorle;2,000;5,00
+Café;19 %;"Café Crema";2,000;5,00
+Café;19 %;Cappuccino;15,000;45,00
+Café;19 %;"Chai Oriental";6,000;21,00
+Café;19 %;"Espresso Doppio";1,000;3,00
+Café;19 %;"Extra Sahne";3,000;1,50
+Café;19 %;"Extra Shot";2,000;2,00
+Café;19 %;"Filterkaffee  Tasse";6,000;15,00
+Café;19 %;Hafermilch;15,000;0,00
+Café;19 %;"Heiße Schokolade";7,000;24,50
+Café;19 %;Koffeinfrei;4,000;0,00
+Café;19 %;"Kurkuma Latte";7,000;24,50
+Café;19 %;"Latte Macchiato";12,000;42,00
+Café;19 %;Milchkaffee;14,000;49,00
+Café;19 %;"Pink Grapefruit Garten-Limonade";2,000;5,00
+Café;19 %;"Schwarze-Johannisbeere Garten-Limonade";1,000;2,50
+Café;19 %;Tee;9,000;22,50
+Café;19 %;"Zitrone Garten-Limonade";1,000;2,50
+"Gesamt Café";;;214,000;619,70
+Shop;7 %;"Espresso Biscotti Schokoriegel 40g, Vivani Deutschland";1,000;1,50
+Shop;7 %;"Handcooked Chips Salt & Vinegar 125g, Trafo Niederland";1,000;2,50
+Shop;7 %;"Kartoffelchips Paprika 125g, Trafo";1,000;2,10
+Shop;7 %;"Pistacchio 'Dubai Style' Schokoriegel 40g, Vivani";1,000;1,80
+Shop;7 %;"schoko Reiswaffeln";1,000;2,00
+Shop;19 %;"Baum des Lebens mit Regenbogen-Kristalltropfen weiß";2,000;10,00
+Shop;19 %;"Bienenwohl - 3er";2,000;7,00
+Shop;19 %;"Edelsteinbaum 78382 -+ 8cm";1,000;6,00
+Shop;19 %;"gemstone Mala knotted 7229";1,000;55,00
+Shop;19 %;"Hautfarben Buntstifte";1,000;13,50
+Shop;19 %;"Mala Brokat Beutel ALL M 9001";2,000;8,00
+Shop;19 %;"Massagegerät all fabre 7779";1,000;9,00
+Shop;19 %;"Mittelgroße Platte aus gefärbtem fuchsiafarbenem Achat";1,000;2,95
+Shop;19 %;"Notizbuch veer&moon 9407";1,000;12,00
+Shop;19 %;"Paisiner Jaspis Armband 8mm";1,000;4,95
+Shop;19 %;"Regenbogen-Kristalle Kreis, Tropfen, Zapfen 9716";3,000;12,00
+Shop;19 %;"Samenbomben - 1er";1,000;2,50
+Shop;19 %;"Samenkarte Veer &Moon 9604";1,000;4,50
+Shop;19 %;Samtbeutel;1,000;14,00
+Shop;19 %;"Steinmix wrist mala 7728";1,000;8,00
+Shop;19 %;"Tasse Herz, Lotus, Auge, Regenbogen 11644";5,000;40,00
+Shop;19 %;"Tzampas Golden Milk 40g";2,000;4,40
+Shop;19 %;"Weißer Salbei Smudge mit Zimt S 2er-set";1,000;4,00
+Shop;19 %;"Weißer Selenit Herz Sorgenstein  -+7cm";1,000;12,00
+Shop;19 %;"Wrist Mala  various 7282";3,000;15,00
+Shop;19 %;"Wrist Mala Steine/various  7206";1,000;10,00
+"Gesamt Shop";;;38,000;264,70
+Spenden;0 %;Spende;1,000;1,00
+"Gesamt Spenden";;;1,000;1,00
+Tharpa;7 %;"Tharpa Buch EN: Great Treasury of Merit (pb) 2nd ed";1,000;16,00
+Tharpa;7 %;"Tharpa Buch: Herzjuwel";1,000;13,95
+Tharpa;7 %;"Tharpa Lesezeichen gelb";2,000;2,00
+Tharpa;7 %;"Tharpa Sadhana Lehrfähigkeiten";1,000;4,00
+Tharpa;7 %;"Tharpa Sadhana: Avalokiteshvara";2,000;14,00
+Tharpa;7 %;"Tharpa Sadhana: Der Yoga von Buddha Amitayus";1,000;7,00
+Tharpa;7 %;"Tharpa Sadhana: Ein reines Leben";1,000;7,00
+Tharpa;7 %;"Tharpa Sadhana: Herzjuwel";1,000;7,00
+Tharpa;19 %;"Tharpa Kunst Guru Sumati Buddha Heruka (mit 6 Tempeln) - A6";1,000;1,50
+Tharpa;19 %;"Tharpa Kunst: A6 Vajrayogini 3 (golden) - Postkarte";1,000;1,50
+"Gesamt Tharpa";;;12,000;73,95
+"Gesamt Artikel";;;265,000;959,35
+
+Zusammenfassung
+Typ;;;Menge;"Brutto €"
+Artikel;;;265,000;959,35
+Gesamtrabatt;;;;-0,00
+Gesamt;;;265,000;959,35
+
+"* Durchlaufender Posten"
